@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h3>Update  :  {{object.id }} - {{object.title}}</h3>
+
+<form method="POST" action=".">{% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="Save" />
+</form>
+
+
+{% endblock %}
+
+
+<!--{{object_list}}-->
+
+<!--{% for obj in query_list %}-->
+
+<!--<h3>{{obj.id}}  -  <a href='{{obj.getUrl}}'  >{{obj.title}}</a> </h3>-->
+
+<!--{% endfor %}-->

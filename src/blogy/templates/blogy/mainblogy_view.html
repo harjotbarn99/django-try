@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>main blogy</h1>
+
+
+
+{% for obj in object_list %}
+
+<h3>{{obj.id}}  -  <a href='{{obj.get_absolute_url}}' >{{obj.title}}</a> </h3><br>
+
+{% endfor %}
+
+{% endblock %}
+
+
+<!--{{object_list}}-->
+
+<!--{% for obj in query_list %}-->
+
+<!--<h3>{{obj.id}}  -  <a href='{{obj.getUrl}}'  >{{obj.title}}</a> </h3>-->
+
+<!--{% endfor %}-->

@@ -1,0 +1,20 @@
+{%  extends "base.html" %}
+
+{% block content %}
+<h1> this is info</h1>
+
+{{request.user}}<br>
+{{request.is_authenticated}}<br>
+<h3>Hi , I am {{name}} and I am {{major}} major.</h3><br>
+
+<ul>
+    {% for item in li %}
+    {% if item == 77 %}
+    <li>{{forloop.counter}} ->  {{item|add:23}}</li>
+
+    {% endif %}
+    <li>{{forloop.counter}} ->  {{item}}</li>
+    {% endfor %}
+</ul>
+
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<form method="POST"> {% csrf_token %}
+<p>u sure bro? "{{obj.title}}"</p>
+    <input type="submit" value="Yes"/>   <a href="./">cancel</a>
+
+</form>
+
+{% endblock %}
